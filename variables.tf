@@ -502,7 +502,7 @@ variable "endpoints" {
 variable "role_associations" {
   description = "Map of IAM roles and supported feature names to associate with the cluster"
   type = map(object({
-    feature_name = optional(string)
+    feature_name = optional(string, "")
     role_arn     = string
   }))
   default  = {}
